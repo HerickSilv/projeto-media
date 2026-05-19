@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Média</title>
+  <link rel="stylesheet" href="style.css"
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Controle de Média</h1>
+    <p>Análise inteligente de consumo de veículos</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- FORMULÁRIO -->
+    <section class="card form-card">
+
+      <h2>Dados do Abastecimento</h2>
+
+      <div class="grid-2">
+        <input type="number" id="hAtual" placeholder="KM Atual">
+        <input type="number" id="hAnterior" placeholder="KM Anterior">
+      </div>
+
+      <input type="number" id="litros" placeholder="Litros Abastecidos">
+
+      <h2>Parâmetros</h2>
+
+      <input type="number" id="consumoPadrao" placeholder="Consumo Padrão (km/l)">
+
+      <div class="grid-2">
+        <input type="number" id="desvioInferior" placeholder="Desvio Inferior (%)">
+        <input type="number" id="desvioSuperior" placeholder="Desvio Superior (%)">
+      </div>
+
+      <button class="btn-primary" id="btnCalcular">Calcular</button>
+      <button class="btn-secondary" id="btnRecalcular">Recalcular</button>
+
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="card result-card">
+
+      <h2>Resultado</h2>
+
+      <div class="kpis">
+        <div class="kpi">
+          <span>Média</span>
+          <strong id="media">-</strong>
+        </div>
+
+        <div class="kpi">
+          <span>Limite Inferior</span>
+          <strong id="limiteInf">-</strong>
+        </div>
+
+        <div class="kpi">
+          <span>Limite Superior</span>
+          <strong id="limiteSup">-</strong>
+        </div>
+      </div>
+
+      <div id="statusBox" class="status hidden"></div>
+
+      <div id="ajusteBox" class="ajuste hidden"></div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
