@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+/* REMOVE SETAS DE NÚMERO (spinner) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* FUNDO DARK PROFISSIONAL */
 body {
   margin: 0;
@@ -81,6 +91,7 @@ input {
   background: #020617;
   color: white;
   transition: 0.2s;
+  font-size: 14px;
 }
 
 input:focus {
@@ -117,16 +128,6 @@ button {
 .btn-primary:hover {
   background: #0ea5e9;
   transform: translateY(-1px);
-}
-
-/* BOTÃO SECUNDÁRIO */
-.btn-secondary {
-  background: #1e293b;
-  color: #cbd5f5;
-}
-
-.btn-secondary:hover {
-  background: #334155;
 }
 
 /* KPIs */

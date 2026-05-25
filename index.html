@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Controle de Média</title>
-  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 
   <header>
     <h1>Controle de Média</h1>
-    <p>Análise inteligente de consumo de veículos</p>
+    <p>Análise consumo de veículos</p>
   </header>
 
   <main class="grid">
@@ -22,23 +22,22 @@
       <h2>Dados do Abastecimento</h2>
 
       <div class="grid-2">
-        <input type="number" id="hAtual" placeholder="KM Atual">
-        <input type="number" id="hAnterior" placeholder="KM Anterior">
+        <input type="text" inputmode="numeric" id="hAtual" placeholder="KM Atual">
+        <input type="text" inputmode="numeric" id="hAnterior" placeholder="KM Anterior">
       </div>
 
-      <input type="number" id="litros" placeholder="Litros Abastecidos">
+      <input type="text" inputmode="numeric" id="litros" placeholder="Litros Abastecidos">
 
       <h2>Parâmetros</h2>
 
-      <input type="number" id="consumoPadrao" placeholder="Consumo Padrão (km/l)">
+      <input type="text" inputmode="numeric" id="consumoPadrao" placeholder="Consumo Padrão (km/l)">
 
       <div class="grid-2">
-        <input type="number" id="desvioInferior" placeholder="Desvio Inferior (%)">
-        <input type="number" id="desvioSuperior" placeholder="Desvio Superior (%)">
+        <input type="text" inputmode="numeric" id="desvioInferior" placeholder="Desvio Inferior (%)">
+        <input type="text" inputmode="numeric" id="desvioSuperior" placeholder="Desvio Superior (%)">
       </div>
 
       <button class="btn-primary" id="btnCalcular">Calcular</button>
-      <button class="btn-secondary" id="btnRecalcular">Recalcular</button>
 
     </section>
 
