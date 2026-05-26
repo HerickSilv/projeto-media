@@ -10,7 +10,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 input[type=number] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* FUNDO DARK PROFISSIONAL */
