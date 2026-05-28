@@ -2,39 +2,63 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Controle de Média</title>
+  <title>Controle de Média – Rede Frota</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app">
 
-  <header>
-    <h1>Controle de Média</h1>
-    <p>Análise consumo de veículos</p>
-  </header>
+  <!-- TOPBAR COM LOGO -->
+  <div class="topbar">
+    <img src="Rede Frota-07.png" alt="Rede Frota" class="logo">
+  </div>
+
+  <!-- FAIXA DE TÍTULO -->
+  <div class="title-bar">
+    <h1>Controle de Média &ndash; Análise de consumo de veículos</h1>
+  </div>
 
   <main class="grid">
 
     <!-- FORMULÁRIO -->
     <section class="card form-card">
 
-      <h2>Dados do Abastecimento</h2>
+      <h2 class="section-title">Dados do Abastecimento</h2>
 
       <div class="grid-2">
-        <input type="text" inputmode="numeric" id="hAtual" placeholder="KM Atual">
-        <input type="text" inputmode="numeric" id="hAnterior" placeholder="KM Anterior">
+        <div class="field">
+          <label for="hAtual">KM Atual</label>
+          <input type="text" inputmode="numeric" id="hAtual" placeholder="KM Atual">
+        </div>
+        <div class="field">
+          <label for="hAnterior">KM Anterior</label>
+          <input type="text" inputmode="numeric" id="hAnterior" placeholder="KM Anterior">
+        </div>
       </div>
 
-      <input type="text" inputmode="numeric" id="litros" placeholder="Litros Abastecidos">
+      <div class="field">
+        <label for="litros">Litros Abastecidos</label>
+        <input type="text" inputmode="numeric" id="litros" placeholder="Litros Abastecidos">
+      </div>
 
-      <h2>Parâmetros</h2>
-
-      <input type="text" inputmode="numeric" id="consumoPadrao" placeholder="Consumo Padrão (km/l)">
+      <div class="field">
+        <label for="consumoPadrao">Consumo Padrão (km/l)</label>
+        <input type="text" inputmode="numeric" id="consumoPadrao" placeholder="Consumo Padrão (km/l)">
+      </div>
 
       <div class="grid-2">
-        <input type="text" inputmode="numeric" id="desvioInferior" placeholder="Desvio Inferior (%)">
-        <input type="text" inputmode="numeric" id="desvioSuperior" placeholder="Desvio Superior (%)">
+        <div class="field">
+          <label for="desvioInferior">Desvio Inferior (%)</label>
+          <input type="text" inputmode="numeric" id="desvioInferior" placeholder="Desvio Inferior (%)">
+        </div>
+        <div class="field">
+          <label for="desvioSuperior">Desvio Superior (%)</label>
+          <input type="text" inputmode="numeric" id="desvioSuperior" placeholder="Desvio Superior (%)">
+        </div>
       </div>
 
       <button class="btn-primary" id="btnCalcular">Calcular</button>
@@ -44,22 +68,22 @@
     <!-- RESULTADO -->
     <section class="card result-card">
 
-      <h2>Resultado</h2>
+      <h2 class="section-title">Resultado</h2>
 
       <div class="kpis">
         <div class="kpi">
-          <span>Média</span>
-          <strong id="media">-</strong>
+          <span class="kpi-label">Média</span>
+          <strong id="media" class="kpi-value">-</strong>
         </div>
 
         <div class="kpi">
-          <span>Limite Inferior</span>
-          <strong id="limiteInf">-</strong>
+          <span class="kpi-label">Limite Inferior</span>
+          <strong id="limiteInf" class="kpi-value">-</strong>
         </div>
 
         <div class="kpi">
-          <span>Limite Superior</span>
-          <strong id="limiteSup">-</strong>
+          <span class="kpi-label">Limite Superior</span>
+          <strong id="limiteSup" class="kpi-value">-</strong>
         </div>
       </div>
 
